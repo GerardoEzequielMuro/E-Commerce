@@ -199,7 +199,7 @@ button:-moz-focusring,
 [type="button"]:-moz-focusring,
 [type="reset"]:-moz-focusring,
 [type="submit"]:-moz-focusring {
-  outline: 0.0625rem dotted ButtonText;
+  outline: 1px dotted ButtonText;
 }
 
 /*Correct the padding in Firefox.*/
@@ -352,10 +352,7 @@ h6,
 
 :root {
   --grid-max-width: 95rem;
-  --grid-gutter: var(
-    --space-s-xl,
-    clamp(1.06rem, calc(0.15rem + 4.57vw), 3.75rem)
-  );
+  --grid-gutter: var(--space-s-xl,clamp(1.06rem, calc(0.15rem + 4.57vw), 3.75rem));
   --grid-columns: 12;
 }
 
@@ -371,7 +368,7 @@ h6,
 
 /* ******************************* Fluid Spaces ********************************************* */
 
-/* @link https://utopia.fyi/space/calculator?c=320,17,1.125,1920,20,1.333,6,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
+/* @link https://utopia.fyi/space/calculator?c=320,17,1.125,1920,20,1.333,6,2,&s=0.75|0.5|0.25,1.5|2|3|4|5|6|7|8|9|10,&g=s,l,xl,12 */
 
 :root {
   --space-3xs: clamp(0.25rem, calc(0.24rem + 0.06vw), 0.31rem);
@@ -382,7 +379,12 @@ h6,
   --space-l: clamp(2.13rem, calc(2.05rem + 0.38vw), 2.5rem);
   --space-xl: clamp(3.19rem, calc(3.08rem + 0.56vw), 3.75rem);
   --space-2xl: clamp(4.25rem, calc(4.1rem + 0.75vw), 5rem);
-  --space-3xl: clamp(6.38rem, calc(6.15rem + 1.13vw), 7.5rem);
+  --space-3xl: clamp(5.31rem, calc(5.13rem + 0.94vw), 6.25rem);
+  --space-4xl: clamp(6.38rem, calc(6.15rem + 1.13vw), 7.5rem);
+  --space-5xl: clamp(7.44rem, calc(7.18rem + 1.31vw), 8.75rem);
+  --space-6xl: clamp(8.5rem, calc(8.2rem + 1.5vw), 10rem);
+  --space-7xl: clamp(9.56rem, calc(9.23rem + 1.69vw), 11.25rem);
+  --space-8xl: clamp(10.63rem, calc(10.25rem + 1.88vw), 12.5rem);
 
   /* One-up pairs */
   --space-3xs-2xs: clamp(0.25rem, calc(0.18rem + 0.38vw), 0.63rem);
@@ -392,41 +394,37 @@ h6,
   --space-m-l: clamp(1.63rem, calc(1.45rem + 0.88vw), 2.5rem);
   --space-l-xl: clamp(2.13rem, calc(1.8rem + 1.63vw), 3.75rem);
   --space-xl-2xl: clamp(3.19rem, calc(2.83rem + 1.81vw), 5rem);
-  --space-2xl-3xl: clamp(4.25rem, calc(3.6rem + 3.25vw), 7.5rem);
+  --space-2xl-3xl: clamp(4.25rem, calc(3.85rem + 2vw), 6.25rem);
+  --space-3xl-4xl: clamp(5.31rem, calc(4.88rem + 2.19vw), 7.5rem);
+  --space-4xl-5xl: clamp(6.38rem, calc(5.9rem + 2.38vw), 8.75rem);
+  --space-5xl-6xl: clamp(7.44rem, calc(6.93rem + 2.56vw), 10rem);
+  --space-6xl-7xl: clamp(8.5rem, calc(7.95rem + 2.75vw), 11.25rem);
+  --space-7xl-8xl: clamp(9.56rem, calc(8.98rem + 2.94vw), 12.5rem);
 
   /* Custom pairs */
-  --space-s-l: clamp(1.06rem, calc(0.78rem + 1.44vw), 2.5rem);
 }
-
-
 
 /* ************************* Custom Properties ********************************************** */
-:root{
-    --dark-color: #090a0b;
-   
-    --primary-color: #712F79;
-    --secondary-color: #4C4C9D;
-    --secondary-color-op: #4C4C9D;
-    --button-color: #4C4C9D;
-  
-    --red: #a61616;
-    --blue: #2211dc;
-    --purple: #483fe8;
-    --orange: #e47b13;
-  
+:root {
+  --dark-color: #090a0b;
 
+  --primary-color: #712f79;
+  --secondary-color: #4c4c9d;
+  --secondary-color-op: #4c4c9d;
+  --button-color: #4c4c9d;
 
-     /*
+  --red: #a61616;
+  --blue: #2211dc;
+  --purple: #483fe8;
+  --orange: #e47b13;
+
+  /*
     MediaQueries
-      768px - 48em
-      992px - 62em
-      1200px - 75em
+      48rem - 48em
+      62rem - 62em
+      75rem - 75em
   */
-  
 }
-
-
-
 
 /* ******************************** Resets ************************************ */
 html {
@@ -463,11 +461,11 @@ a {
 
 .header {
   width: 100%;
-  height: 4rem;
+  height: var(--space-2xl);
   background-color: var(--secondary-color);
   position: sticky;
   top: 0;
-  margin-bottom: 1.875rem;
+  margin-bottom: var(--space-m);
   z-index: 5;
 }
 
@@ -478,14 +476,14 @@ a {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  gap: 0.625rem;
+  gap: var(--space-2xs);
 }
 
 .mark-container {
-  max-width: 3.75rem;
+  max-width: var(--space-xl);
   position: absolute;
-  top: 0.2rem;
-  left: 0.625rem;
+  top: var(--space-3xs);
+  left: var(--space-2xs);
 }
 
 .mark-container img {
@@ -496,9 +494,9 @@ a {
 
 /* *************************** Dopdown of the Header **************************************** */
 .dropdown {
-  max-width: 3.75rem;
+  max-width: var(--space-2xl);
   position: relative;
-  right: 1.875rem;
+  right: var(--space-l);
   display: inline-block;
   cursor: pointer;
 }
@@ -508,24 +506,24 @@ a {
   transform: translate(12.5rem);
   position: absolute;
   right: -1.875rem;
-  top: 1.875rem;
-  min-width: 9.375rem;
-  min-height: 9.375rem;
+  top: 2.0625rem;
+  min-width: var(--space-7xl);
+  min-height: var(--space-7xl);
   padding: 0.75rem 1rem;
   z-index: 1;
   background-color: var(--secondary-color-op);
-  border: 0.3125rem solid var(--dark-color);
+  border: var(--space-3xs) solid var(--dark-color);
   border-top: none;
-  box-shadow: 0.3125rem 0.3125rem 0.3125rem var(--dark-color);
+  box-shadow: var(--space-3xs) var(--space-3xs) var(--space-3xs) var(--dark-color);
 }
 
 .dropdown-content a {
-  border: 0.3125rem solid var(--dark-color);
-  width: 9.375rem;
-  height: 3.125rem;
+  border: var(--space-3xs) solid var(--dark-color);
+  width: var(--space-7xl);
+  height: var(--space-xl);
   text-align: center;
-  padding-top: 0.9375rem;
-  box-shadow: 0.3125rem 0.3125rem var(--dark-color);
+  padding-top: var(--space-s);
+  box-shadow: var(--space-3xs) var(--space-3xs) var(--dark-color);
   background-color: var(--button-color);
 }
 
@@ -538,11 +536,11 @@ a {
   flex-direction: row;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 1.875rem;
+  gap: var(--space-l);
 }
 
 .sub-dropdown a {
-  width: 5rem;
+  width: var(--space-3xl);
 }
 
 .sub-dropdown a:hover {
@@ -552,8 +550,8 @@ a {
 .sub-dropdown .heart {
   background-image: url(/media/icons/corazon-rojo.png);
   transform: none;
-  width: 3.125rem;
-  height: 3.125rem;
+  width: var(--space-xl);
+  height: var(--space-xl);
 
   background-color: initial;
   border: initial;
@@ -566,8 +564,8 @@ a {
 .sub-dropdown .cart {
   background-image: url(/media/icons/cart.png);
   transform: none;
-  width: 3.125rem;
-  height: 3.125rem;
+  width: var(--space-xl);
+  height: var(--space-xl);
 
   background-color: initial;
   border: initial;
@@ -580,8 +578,8 @@ a {
 .sub-dropdown .user {
   background-image: url(/media/icons/users.png);
   transform: none;
-  width: 3.125rem;
-  height: 3.125rem;
+  width: var(--space-xl);
+  height: var(--space-xl);
 
   background-color: initial;
   border: initial;
@@ -596,8 +594,8 @@ a {
   top: -1.875rem;
   right: -0.625rem;
   z-index: 999;
-  width: 4rem;
-  height: 3rem;
+  width: var(--space-2xl);
+  height: var(--space-xl);
   cursor: pointer;
   opacity: 0;
 }
@@ -607,8 +605,8 @@ a {
   top: 1rem;
   right: 0.0625rem;
   z-index: 998;
-  width: 3rem;
-  height: 0.6rem;
+  width: var(--space-xl);
+  height: var(--space-2xs);
   background-color: var(--dark-color);
   transform: rotate(0deg) translate(0, -1.2rem);
   transition: transform 0.5s ease, background-color 500ms ease;
@@ -620,7 +618,7 @@ a {
   content: "";
   display: block;
   width: 100%;
-  height: 0.6rem;
+  height: var(--space-2xs);
   background-color: var(--dark-color);
   transition: transform 500ms ease;
 }
@@ -645,7 +643,7 @@ a {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 1.5625rem;
+  gap: var(--space-m);
   transition: transform 500ms linear;
   transform: translateY(-31.25rem);
 }
@@ -660,7 +658,7 @@ a {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 1.5625rem;
+  gap: var(--space-m);
 }
 
 .off-canvas-btn:checked + .off-canvas-burger::before {
@@ -698,7 +696,7 @@ a {
 }
 
 .photo-text {
-  margin-bottom: 1.875rem;
+  margin-bottom: var(--space-m);
 }
 
 .photo > img {
@@ -706,8 +704,8 @@ a {
   height: auto;
   background-color: var(--dark-color);
 
-  border: 0.25rem solid var(--dark-color);
-  box-shadow: 0.3125rem 0.3125rem var(--dark-color);
+  border: var(--space-3xs)  solid var(--dark-color);
+  box-shadow: var(--space-3xs) var(--space-3xs) var(--dark-color);
 }
 /*  *************************** Photo Colors Buttons ********************************* */
 
@@ -726,7 +724,7 @@ a {
   width: var(--space-xl-2xl);
   height: var(--space-xl-2xl);
   border: 0.125rem solid var(--dark-color);
-  box-shadow: 0.1875rem 0.1875rem var(--dark-color);
+  box-shadow: var(--space-3xs) var(--space-3xs) var(--dark-color);
 }
 
 .colors a:hover {
@@ -767,18 +765,18 @@ a {
   border: 0.125rem solid var(--dark-color);
   text-align: center;
   background-color: var(--button-color);
-  box-shadow: 0.3125rem 0.3125rem var(--dark-color);
+  box-shadow: var(--space-3xs) var(--space-3xs) var(--dark-color);
 }
 
 .sizes a:hover {
-  transform: scale(1.1) translateY(-0.9375rem) translateX(-0.9375rem);
-  box-shadow: 0.375rem 0.9375rem rgba(0, 0, 0, 0.657);
+  transform: scale(1.1) translateY(-var(--space-s)) translateX(-var(--space-s));
+  box-shadow: var(--space-3xs) var(--space-s) rgba(0, 0, 0, 0.657);
 }
 
 /* ************************ Buttons of article ****************************** */
 
 .buttons-options {
-  margin-top: 1.25rem;
+  margin-top: var(--space-s);
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -796,21 +794,21 @@ a {
   width: 60%;
   font-size: var(--step--1);
   background-color: var(--button-color);
-  padding: 1.25rem;
+  padding: var(--space-s);
   border: 0.125rem solid var(--dark-color);
-  box-shadow: 0.1875rem 0.1875rem var(--dark-color);
+  box-shadow: var(--space-3xs) var(--space-3xs) var(--dark-color);
 }
 
 .buttons-options a:hover {
-  transform: translateY(-0.625rem) translateX(-0.625rem);
-  box-shadow: 0.375rem 0.9375rem rgba(0, 0, 0, 0.657);
+  transform: translateY(-10px) translateX(-10px);
+  box-shadow: var(--space-2xs) var(--space-s) rgba(0, 0, 0, 0.657);
 }
 
 .buttons-options a[class="heart"] {
   transform: none;
-  width: 3.125rem;
-  height: 3.125rem;
-  margin-top: 0.9375rem;
+  width: var(--space-xl);
+  height: var(--space-xl);
+  margin-top: var(--space-s);
   background-color: initial;
   border: initial;
   box-shadow: none;
@@ -825,9 +823,9 @@ a {
 
 .buttons-options a[class="cart"] {
   transform: none;
-  width: 3.125rem;
-  height: 3.125rem;
-  margin-top: 0.9375rem;
+  width: var(--space-xl);
+  height: var(--space-xl);
+  margin-top: var(--space-s);
   background-color: initial;
   border: initial;
   box-shadow: none;
@@ -839,8 +837,8 @@ a {
 /* ************************** Secondary Section ********************************************* */
 
 .secondary-section {
-  margin-top: 12.5rem;
-  margin-bottom: 12.5rem;
+  margin-top: var(--space-8xl);
+  margin-bottom: var(--space-8xl);
   height: 100%;
   width: 80%;
 }
@@ -868,8 +866,8 @@ a {
 
   background-color: var(--dark-color);
 
-  border: 0.25rem solid var(--dark-color);
-  box-shadow: 0.3125rem 0.3125rem var(--dark-color);
+  border: var(--space-3xs) solid var(--dark-color);
+  box-shadow: var(--space-3xs) var(--space-3xs) var(--dark-color);
 }
 
 /* ************************************** Footer ******************************************** */
@@ -879,5 +877,5 @@ footer {
   width: 100%;
   height: 10%;
   text-align: center;
-  padding: 0.9375rem;
+  padding: var(--space-s);
 }
