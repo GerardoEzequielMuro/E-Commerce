@@ -1,0 +1,883 @@
+/* ******************************** Normalize CSS ******************************************* */
+/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+
+/* Document
+   ========================================================================== */
+
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in iOS.
+ */
+
+html {
+  line-height: 1.15; /* 1 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+}
+
+/* Sections
+     ========================================================================== */
+
+/**
+   * Remove the margin in all browsers.
+   */
+
+body {
+  margin: 0;
+}
+
+/**
+   * Render the `main` element consistently in IE.
+   */
+
+main {
+  display: block;
+}
+
+/**
+   * Correct the font size and margin on `h1` elements within `section` and
+   * `article` contexts in Chrome, Firefox, and Safari.
+   */
+
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/* Grouping content
+     ========================================================================== */
+
+/**
+   * 1. Add the correct box sizing in Firefox.
+   * 2. Show the overflow in Edge and IE.
+   */
+
+hr {
+  box-sizing: content-box; /* 1 */
+  height: 0; /* 1 */
+  overflow: visible; /* 2 */
+}
+
+/**
+   * 1. Correct the inheritance and scaling of font size in all browsers.
+   * 2. Correct the odd `em` font sizing in all browsers.
+   */
+
+pre {
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
+}
+
+/* Text-level semantics
+     ========================================================================== */
+
+/**
+   * Remove the gray background on active links in IE 10.
+   */
+
+a {
+  background-color: transparent;
+}
+
+/**
+   * 1. Remove the bottom border in Chrome 57-
+   * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+   */
+
+abbr[title] {
+  border-bottom: none; /* 1 */
+  text-decoration: underline; /* 2 */
+  text-decoration: underline dotted; /* 2 */
+}
+
+/**
+   * Add the correct font weight in Chrome, Edge, and Safari.
+   */
+
+b,
+strong {
+  font-weight: bolder;
+}
+
+/**
+   * 1. Correct the inheritance and scaling of font size in all browsers.
+   * 2. Correct the odd `em` font sizing in all browsers.
+   */
+
+code,
+kbd,
+samp {
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
+}
+
+/**
+   * Add the correct font size in all browsers.
+   */
+
+small {
+  font-size: 80%;
+}
+
+/**
+   * Prevent `sub` and `sup` elements from affecting the line height in
+   * all browsers.
+   */
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/* Embedded content
+     ========================================================================== */
+
+/*Remove the border on images inside links in IE 10.*/
+img {
+  border-style: none;
+}
+
+/*Forms========================================================================== */
+
+/**
+   * 1. Change the font styles in all browsers.
+   * 2. Remove the margin in Firefox and Safari.
+   */
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit; /* 1 */
+  font-size: 100%; /* 1 */
+  line-height: 1.15; /* 1 */
+  margin: 0; /* 2 */
+}
+
+/**
+   * Show the overflow in IE.
+   * 1. Show the overflow in Edge.
+   */
+button,
+input {
+  /* 1 */
+  overflow: visible;
+}
+
+/**
+   * Remove the inheritance of text transform in Edge, Firefox, and IE.
+   * 1. Remove the inheritance of text transform in Firefox.
+   */
+
+button,
+select {
+  /* 1 */
+  text-transform: none;
+}
+
+/*Remove the inner border and padding in Firefox.*/
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+/*Restore the focus styles unset by the previous rule.*/
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 0.0625rem dotted ButtonText;
+}
+
+/*Correct the padding in Firefox.*/
+
+fieldset {
+  padding: 0.35em 0.75em 0.625em;
+}
+
+/*
+   * 1. Correct the text wrapping in Edge and IE.
+   * 2. Correct the color inheritance from `fieldset` elements in IE.
+   * 3. Remove the padding so developers are not caught out when they zero out
+   *    `fieldset` elements in all browsers.
+   */
+
+legend {
+  box-sizing: border-box; /* 1 */
+  color: inherit; /* 2 */
+  display: table; /* 1 */
+  max-width: 100%; /* 1 */
+  padding: 0; /* 3 */
+  white-space: normal; /* 1 */
+}
+
+/*Add the correct vertical alignment in Chrome, Firefox, and Opera.*/
+progress {
+  vertical-align: baseline;
+}
+
+/*Remove the default vertical scrollbar in IE 10+.*/
+textarea {
+  overflow: auto;
+}
+
+/*
+   1. Add the correct box sizing in IE 10.
+   2. Remove the padding in IE 10.*/
+
+[type="checkbox"],
+[type="radio"] {
+  box-sizing: border-box; /* 1 */
+  padding: 0; /* 2 */
+}
+
+/*Correct the cursor style of increment and decrement buttons in Chrome.*/
+
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/*Remove the inner padding in Chrome and Safari on macOS.*/
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/*1. Correct the inability to style clickable types in iOS and Safari.
+  2. Change font properties to `inherit` in Safari.*/
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button; /* 1 */
+  font: inherit; /* 2 */
+}
+
+/*Interactive ========================================================================== */
+
+/*Add the correct display in Edge, IE 10+, and Firefox.*/
+details {
+  display: block;
+}
+
+/*Add the correct display in all browsers.*/
+summary {
+  display: list-item;
+}
+
+/*Misc ========================================================================== */
+
+/*Add the correct display in IE 10+.*/
+template {
+  display: none;
+}
+
+/*Add the correct display in IE 10.*/
+[hidden] {
+  display: none;
+}
+/* ******************** Fluid Design ******************** */
+/* @link https://utopia.fyi/type/calculator?c=320,17,1.125,1920,20,1.333,6,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
+
+:root {
+  --step--2: clamp(0.7rem, calc(0.87rem + -0.14vw), 0.84rem);
+  --step--1: clamp(0.94rem, calc(0.95rem + -0.01vw), 0.94rem);
+  --step-0: clamp(1.06rem, calc(1.03rem + 0.19vw), 1.25rem);
+  --step-1: clamp(1.2rem, calc(1.1rem + 0.47vw), 1.67rem);
+  --step-2: clamp(1.35rem, calc(1.17rem + 0.88vw), 2.22rem);
+  --step-3: clamp(1.51rem, calc(1.22rem + 1.45vw), 2.96rem);
+  --step-4: clamp(1.7rem, calc(1.25rem + 2.25vw), 3.95rem);
+  --step-5: clamp(1.91rem, calc(1.25rem + 3.35vw), 5.26rem);
+  --step-6: clamp(2.15rem, calc(1.18rem + 4.86vw), 7.01rem);
+}
+
+/* ************************ Reset Headings ********************* */
+
+.setp-6 {
+  font-size: var(--step-6);
+}
+
+h1,
+.step-5 {
+  font-size: var(--step-5);
+}
+
+h2,
+.step-4 {
+  font-size: var(--step-4);
+}
+
+h3,
+.step-3 {
+  font-size: var(--step-3);
+}
+
+h4,
+.step-2 {
+  font-size: var(--step-2);
+}
+
+h5,
+.step-1 {
+  font-size: var(--step-1);
+}
+
+h6,
+.step-0 {
+  font-size: var(--step-0);
+}
+
+.step--1 {
+  font-size: var(--step--1);
+}
+
+.step--2 {
+  font-size: var(--step--2);
+}
+
+/* ************************************ Fluid Grid **************************************** */
+
+/* @link https://utopia.fyi/grid/calculator?c=320,17,1.2,1260,20,1.25,6,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,xl,l,12 */
+
+:root {
+  --grid-max-width: 95rem;
+  --grid-gutter: var(
+    --space-s-xl,
+    clamp(1.06rem, calc(0.15rem + 4.57vw), 3.75rem)
+  );
+  --grid-columns: 12;
+}
+
+.u-container {
+  max-width: var(--grid-max-width);
+  margin-inline: auto;
+}
+
+.u-grid {
+  display: grid;
+  gap: var(--grid-gutter);
+}
+
+/* ******************************* Fluid Spaces ********************************************* */
+
+/* @link https://utopia.fyi/space/calculator?c=320,17,1.125,1920,20,1.333,6,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
+
+:root {
+  --space-3xs: clamp(0.25rem, calc(0.24rem + 0.06vw), 0.31rem);
+  --space-2xs: clamp(0.56rem, calc(0.55rem + 0.06vw), 0.63rem);
+  --space-xs: clamp(0.81rem, calc(0.79rem + 0.13vw), 0.94rem);
+  --space-s: clamp(1.06rem, calc(1.03rem + 0.19vw), 1.25rem);
+  --space-m: clamp(1.63rem, calc(1.58rem + 0.25vw), 1.88rem);
+  --space-l: clamp(2.13rem, calc(2.05rem + 0.38vw), 2.5rem);
+  --space-xl: clamp(3.19rem, calc(3.08rem + 0.56vw), 3.75rem);
+  --space-2xl: clamp(4.25rem, calc(4.1rem + 0.75vw), 5rem);
+  --space-3xl: clamp(6.38rem, calc(6.15rem + 1.13vw), 7.5rem);
+
+  /* One-up pairs */
+  --space-3xs-2xs: clamp(0.25rem, calc(0.18rem + 0.38vw), 0.63rem);
+  --space-2xs-xs: clamp(0.56rem, calc(0.49rem + 0.38vw), 0.94rem);
+  --space-xs-s: clamp(0.81rem, calc(0.73rem + 0.44vw), 1.25rem);
+  --space-s-m: clamp(1.06rem, calc(0.9rem + 0.81vw), 1.88rem);
+  --space-m-l: clamp(1.63rem, calc(1.45rem + 0.88vw), 2.5rem);
+  --space-l-xl: clamp(2.13rem, calc(1.8rem + 1.63vw), 3.75rem);
+  --space-xl-2xl: clamp(3.19rem, calc(2.83rem + 1.81vw), 5rem);
+  --space-2xl-3xl: clamp(4.25rem, calc(3.6rem + 3.25vw), 7.5rem);
+
+  /* Custom pairs */
+  --space-s-l: clamp(1.06rem, calc(0.78rem + 1.44vw), 2.5rem);
+}
+
+
+
+/* ************************* Custom Properties ********************************************** */
+:root{
+    --dark-color: #090a0b;
+   
+    --primary-color: #712F79;
+    --secondary-color: #4C4C9D;
+    --secondary-color-op: #4C4C9D;
+    --button-color: #4C4C9D;
+  
+    --red: #a61616;
+    --blue: #2211dc;
+    --purple: #483fe8;
+    --orange: #e47b13;
+  
+
+
+     /*
+    MediaQueries
+      768px - 48em
+      992px - 62em
+      1200px - 75em
+  */
+  
+}
+
+
+
+
+/* ******************************** Resets ************************************ */
+html {
+  box-sizing: border-box;
+  height: 100%;
+  width: 100%;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  font-family: "Press Start 2P", cursive;
+  font-size: 0.625rem;
+  height: 100%;
+  width: 100%;
+  background-color: var(--primary-color);
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--dark-color);
+}
+
+/* ******************** Header ******************** */
+
+.header {
+  width: 100%;
+  height: 4rem;
+  background-color: var(--secondary-color);
+  position: sticky;
+  top: 0;
+  margin-bottom: 1.875rem;
+  z-index: 5;
+}
+
+.navigation {
+  max-width: 100%;
+  max-height: 100%;
+  min-height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 0.625rem;
+}
+
+.mark-container {
+  max-width: 3.75rem;
+  position: absolute;
+  top: 0.2rem;
+  left: 0.625rem;
+}
+
+.mark-container img {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* *************************** Dopdown of the Header **************************************** */
+.dropdown {
+  max-width: 3.75rem;
+  position: relative;
+  right: 1.875rem;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.dropdown-content {
+  display: block;
+  transform: translate(12.5rem);
+  position: absolute;
+  right: -1.875rem;
+  top: 1.875rem;
+  min-width: 9.375rem;
+  min-height: 9.375rem;
+  padding: 0.75rem 1rem;
+  z-index: 1;
+  background-color: var(--secondary-color-op);
+  border: 0.3125rem solid var(--dark-color);
+  border-top: none;
+  box-shadow: 0.3125rem 0.3125rem 0.3125rem var(--dark-color);
+}
+
+.dropdown-content a {
+  border: 0.3125rem solid var(--dark-color);
+  width: 9.375rem;
+  height: 3.125rem;
+  text-align: center;
+  padding-top: 0.9375rem;
+  box-shadow: 0.3125rem 0.3125rem var(--dark-color);
+  background-color: var(--button-color);
+}
+
+.dropdown-content a:hover {
+  transform: scale(1.1);
+}
+
+.sub-dropdown {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.875rem;
+}
+
+.sub-dropdown a {
+  width: 5rem;
+}
+
+.sub-dropdown a:hover {
+  transform: scale(1.1);
+}
+
+.sub-dropdown .heart {
+  background-image: url(/media/icons/corazon-rojo.png);
+  transform: none;
+  width: 3.125rem;
+  height: 3.125rem;
+
+  background-color: initial;
+  border: initial;
+  box-shadow: none;
+
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.sub-dropdown .cart {
+  background-image: url(/media/icons/cart.png);
+  transform: none;
+  width: 3.125rem;
+  height: 3.125rem;
+
+  background-color: initial;
+  border: initial;
+  box-shadow: none;
+
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.sub-dropdown .user {
+  background-image: url(/media/icons/users.png);
+  transform: none;
+  width: 3.125rem;
+  height: 3.125rem;
+
+  background-color: initial;
+  border: initial;
+  box-shadow: none;
+
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.off-canvas-btn {
+  position: absolute;
+  top: -1.875rem;
+  right: -0.625rem;
+  z-index: 999;
+  width: 4rem;
+  height: 3rem;
+  cursor: pointer;
+  opacity: 0;
+}
+
+.off-canvas-burger {
+  position: absolute;
+  top: 1rem;
+  right: 0.0625rem;
+  z-index: 998;
+  width: 3rem;
+  height: 0.6rem;
+  background-color: var(--dark-color);
+  transform: rotate(0deg) translate(0, -1.2rem);
+  transition: transform 0.5s ease, background-color 500ms ease;
+  transform-origin: top left;
+}
+
+.off-canvas-burger::before,
+.off-canvas-burger::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 0.6rem;
+  background-color: var(--dark-color);
+  transition: transform 500ms ease;
+}
+
+/* ***************************** Transforms of burger *************************************** */
+.off-canvas-burger::before {
+  transform: rotate(0deg) translate(0, -0.9rem);
+  /* background-color: blue; */
+}
+
+.off-canvas-burger::after {
+  transform: rotate(0deg) translate(0, 0.3rem);
+  /* background-color: green; */
+}
+
+.off-canvas-btn:checked + .off-canvas-burger {
+  background: transparent;
+}
+
+.off-canvas-btn:not(:checked) + .off-canvas-burger + .dropdown-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5625rem;
+  transition: transform 500ms linear;
+  transform: translateY(-31.25rem);
+}
+
+.off-canvas-btn:checked + .off-canvas-burger + .dropdown-content {
+  transition: transform 500ms linear;
+  transform: translateY(0.0625rem);
+}
+
+.off-canvas-btn:checked + .off-canvas-burger + .dropdown-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5625rem;
+}
+
+.off-canvas-btn:checked + .off-canvas-burger::before {
+  transform: rotate(45deg) translate(0, 0);
+}
+
+.off-canvas-btn:checked + .off-canvas-burger::after {
+  transform: rotate(-45deg) translate(0.4rem, -0.5rem);
+}
+
+/* ***************** Principal Section ****************************/
+
+.principal-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ************************************ photo *************************************************/
+
+.photo-section {
+  width: 95%;
+  height: 100%;
+}
+
+.photo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.photo-text h3 {
+  text-align: center;
+}
+
+.photo-text {
+  margin-bottom: 1.875rem;
+}
+
+.photo > img {
+  width: clamp(16.188rem, 100%, 53.75rem);
+  height: auto;
+  background-color: var(--dark-color);
+
+  border: 0.25rem solid var(--dark-color);
+  box-shadow: 0.3125rem 0.3125rem var(--dark-color);
+}
+/*  *************************** Photo Colors Buttons ********************************* */
+
+.colors {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+
+  margin-top: var(--space-m);
+  margin-bottom: var(--space-s);
+}
+
+.colors a {
+  width: var(--space-xl-2xl);
+  height: var(--space-xl-2xl);
+  border: 0.125rem solid var(--dark-color);
+  box-shadow: 0.1875rem 0.1875rem var(--dark-color);
+}
+
+.colors a:hover {
+  transform: scale(1.1);
+}
+
+.red {
+  background-color: var(--red);
+}
+
+.blue {
+  background-color: var(--blue);
+}
+
+.blue-sky {
+  background-color: var(--purple);
+}
+
+.orange {
+  background-color: var(--orange);
+}
+
+/* ***************************** Sizes Buttons ********************************************** */
+.sizes {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-content: center;
+}
+
+.sizes a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: var(--space-3xl);
+  height: var(--space-xl-2xl);
+  border: 0.125rem solid var(--dark-color);
+  text-align: center;
+  background-color: var(--button-color);
+  box-shadow: 0.3125rem 0.3125rem var(--dark-color);
+}
+
+.sizes a:hover {
+  transform: scale(1.1) translateY(-0.9375rem) translateX(-0.9375rem);
+  box-shadow: 0.375rem 0.9375rem rgba(0, 0, 0, 0.657);
+}
+
+/* ************************ Buttons of article ****************************** */
+
+.buttons-options {
+  margin-top: 1.25rem;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  position: relative;
+}
+
+.buttons-options span {
+  font-size: var(--step--1);
+  position: absolute;
+  top: -1.875rem;
+  left: 1.875rem;
+}
+
+.buttons-options a {
+  width: 60%;
+  font-size: var(--step--1);
+  background-color: var(--button-color);
+  padding: 1.25rem;
+  border: 0.125rem solid var(--dark-color);
+  box-shadow: 0.1875rem 0.1875rem var(--dark-color);
+}
+
+.buttons-options a:hover {
+  transform: translateY(-0.625rem) translateX(-0.625rem);
+  box-shadow: 0.375rem 0.9375rem rgba(0, 0, 0, 0.657);
+}
+
+.buttons-options a[class="heart"] {
+  transform: none;
+  width: 3.125rem;
+  height: 3.125rem;
+  margin-top: 0.9375rem;
+  background-color: initial;
+  border: initial;
+  box-shadow: none;
+  background-image: url(/media/icons/corazon-blanco.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.buttons-options a[class="heart"]:hover {
+  background-image: url(/media/icons/corazon-rojo.png);
+}
+
+.buttons-options a[class="cart"] {
+  transform: none;
+  width: 3.125rem;
+  height: 3.125rem;
+  margin-top: 0.9375rem;
+  background-color: initial;
+  border: initial;
+  box-shadow: none;
+  background-image: url(/media/icons/cart.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+/* ************************** Secondary Section ********************************************* */
+
+.secondary-section {
+  margin-top: 12.5rem;
+  margin-bottom: 12.5rem;
+  height: 100%;
+  width: 80%;
+}
+
+.secondary-section h2 {
+  text-align: center;
+}
+
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  flex-direction: row;
+}
+.flex-item {
+  background-color: var(--red);
+  width: fit-content;
+  height: auto;
+}
+
+.flex-item img {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+
+  background-color: var(--dark-color);
+
+  border: 0.25rem solid var(--dark-color);
+  box-shadow: 0.3125rem 0.3125rem var(--dark-color);
+}
+
+/* ************************************** Footer ******************************************** */
+
+footer {
+  background-color: var(--secondary-color);
+  width: 100%;
+  height: 10%;
+  text-align: center;
+  padding: 0.9375rem;
+}
