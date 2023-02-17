@@ -618,7 +618,7 @@ a {
   content: "";
   display: block;
   width: 100%;
-  height: 0.6rem;
+  height: var(--space-2xs);
   background-color: var(--dark-color);
   transition: transform 500ms ease;
 }
